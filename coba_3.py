@@ -10,7 +10,7 @@ from PIL import Image
 # ==========================
 @st.cache_resource
 def load_models():
-    yolo_model = YOLO("2208108010089_,Naila Ghina Rania_Laporan 4.pt")  # Sesuaikan path model YOLO
+    yolo_model = YOLO("2208108010089_Naila Ghina Rania_Laporan 4.pt")  # Sesuaikan path model YOLO
     classifier = tf.keras.models.load_model("my_jam_model.h5")  # Sesuaikan path model klasifikasi
     return yolo_model, classifier
 
@@ -41,4 +41,5 @@ if uploaded_file is not None:
     predicted_class = np.argmax(prediction)
 
     st.write("Hasil Klasifikasi:", predicted_class)
+
 
