@@ -4,6 +4,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
+import cv2
 
 # ==========================
 # Load Models
@@ -41,3 +42,4 @@ if uploaded_file is not None:
     predicted_class = np.argmax(prediction)
 
     st.write("Hasil Klasifikasi:", predicted_class)
+
